@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Flotas de Transporte</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #e9ecef;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+        section {
+            padding: 20px;
+            margin: 10px 0;
+            border-top: 1px solid #ddd;
+        }
+        h2 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .alert {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Gestión de Flotas de Transporte</h1>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#vehiculos">Vehículos</a>
+        <a href="#conductores">Conductores</a>
+        <a href="#fletes">Fletes</a>
+        <a href="#mantenimientos">Mantenimientos</a>
+        <a href="#gastos">Gastos</a>
+    </nav>
+
+    <!-- Sección de Inicio -->
+    <section id="inicio">
+        <h2>Inicio</h2>
+        <p>Bienvenido al sistema de gestión de flotas de transporte. Aquí puedes monitorear todos los aspectos de tu flota, desde el registro de vehículos y conductores hasta la gestión de fletes, mantenimientos y gastos.</p>
+        <p>Estadísticas clave:</p>
+        <ul>
+            <li>Vehículos activos: 15</li>
+            <li>Conductores disponibles: 8</li>
+            <li>Ingresos este mes: $30,000</li>
+        </ul>
+    </section>
+
+    <!-- Sección de Vehículos -->
+    <section id="vehiculos">
+        <h2>Vehículos</h2>
+        <p>Listado de vehículos de la flota:</p>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Año</th>
+                <th>Estado</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Volvo</td>
+                <td>FH16</td>
+                <td>2022</td>
+                <td>Activo</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Scania</td>
+                <td>R500</td>
+                <td>2021</td>
+                <td>Mantenimiento</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Sección de Conductores -->
+    <section id="conductores">
+        <h2>Conductores</h2>
+        <p>Lista de conductores y auxiliares:</p>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Licencia</th>
+                <th>Experiencia</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Juan Pérez</td>
+                <td>A2</td>
+                <td>5 años</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>María López</td>
+                <td>A3</td>
+                <td>3 años</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Sección de Fletes -->
+    <section id="fletes">
+        <h2>Fletes</h2>
+        <p>Historial de fletes realizados:</p>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Origen</th>
+                <th>Destino</th>
+                <th>Vehículo</th>
+                <th>Ingreso</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Madrid</td>
+                <td>Sevilla</td>
+                <td>Volvo FH16</td>
+                <td>$2000</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Sección de Mantenimientos -->
+    <section id="mantenimientos">
+        <h2>Mantenimientos</h2>
+        <p>Alertas y próximos mantenimientos:</p>
+        <p class="alert">Próximo mantenimiento: Scania R500 - Cambio de aceite en 100 km</p>
+        <p class="alert">Volvo FH16 - Inspección general en 300 km</p>
+    </section>
+
+    <!-- Sección de Gastos -->
+    <section id="gastos">
+        <h2>Gastos</h2>
+        <p>Registro de gastos recientes:</p>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Descripción</th>
+                <th>Tipo</th>
+                <th>Monto</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Combustible</td>
+                <td>Operativo</td>
+                <td>$500</td>
+            </tr>
+        </table>
+    </section>
+
+</body>
+</html>

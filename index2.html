@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Flotas</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background: #2f3e46;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar h2 {
+            margin-top: 0;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .sidebar a:hover {
+            background: #354f52;
+        }
+        .main {
+            flex: 1;
+            padding: 20px;
+            background-color: #f4f4f9;
+            overflow-y: auto;
+        }
+        .header {
+            height: 60px;
+            background: #52796f;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            margin-top: 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .table th, .table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .table th {
+            background-color: #f0f0f0;
+        }
+        .alert {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Gestión de Flotas</h2>
+        <a href="#">Dashboard</a>
+        <a href="#">Vehículos</a>
+        <a href="#">Conductores y Auxiliares</a>
+        <a href="#">Fletes</a>
+        <a href="#">Mantenimientos</a>
+        <a href="#">Gastos</a>
+        <a href="#">Rodamientos</a>
+        <a href="#">Reportes</a>
+        <a href="#">Configuración</a>
+    </div>
+
+    <div class="main">
+        <div class="header">
+            <h1>Dashboard</h1>
+            <div>Usuario</div>
+        </div>
+
+        <!-- Sección de Estadísticas -->
+        <div class="card">
+            <h2>Estadísticas Generales</h2>
+            <p>Vehículos Activos: 10</p>
+            <p>Mantenimientos Pendientes: 3</p>
+            <p>Ingresos Recientes: $15,000</p>
+        </div>
+
+        <!-- Sección de Gestión de Vehículos -->
+        <div class="card">
+            <h2>Gestión de Vehículos</h2>
+            <button>Registrar Vehículo</button>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Año</th>
+                        <th>Capacidad</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Volvo</td>
+                        <td>FH16</td>
+                        <td>2020</td>
+                        <td>40 tons</td>
+                        <td>Activo</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Scania</td>
+                        <td>R450</td>
+                        <td>2019</td>
+                        <td>35 tons</td>
+                        <td>Mantenimiento</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Sección de Control de Fletes -->
+        <div class="card">
+            <h2>Control de Fletes</h2>
+            <button>Registrar Flete</button>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Origen</th>
+                        <th>Destino</th>
+                        <th>Vehículo</th>
+                        <th>Conductor</th>
+                        <th>Ingreso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Ciudad A</td>
+                        <td>Ciudad B</td>
+                        <td>Volvo FH16</td>
+                        <td>Juan Pérez</td>
+                        <td>$500</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Sección de Mantenimientos -->
+        <div class="card">
+            <h2>Alertas de Mantenimiento</h2>
+            <p class="alert">Volvo FH16 - Cambio de aceite en 500 km</p>
+            <p class="alert">Scania R450 - Inspección general en 1000 km</p>
+        </div>
+
+        <!-- Sección de Gestión de Gastos -->
+        <div class="card">
+            <h2>Gestión de Gastos</h2>
+            <button>Registrar Gasto</button>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                        <th>Monto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Combustible</td>
+                        <td>Operativo</td>
+                        <td>$300</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+

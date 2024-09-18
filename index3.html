@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Flotas</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            background: #2f3e46;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            height: 100vh;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .sidebar a:hover {
+            background: #354f52;
+        }
+        .header {
+            height: 60px;
+            background: #52796f;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            justify-content: space-between;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .main {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            margin-top: 0;
+        }
+        .card-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .card-table th, .card-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .card-table th {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Gestión de Flotas</h2>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#vehiculos">Vehículos</a>
+        <a href="#conductores">Conductores</a>
+        <a href="#fletes">Fletes</a>
+        <a href="#mantenimientos">Mantenimientos</a>
+        <a href="#gastos">Gastos</a>
+        <a href="#rodamientos">Rodamientos</a>
+        <a href="#reportes">Reportes</a>
+    </div>
+
+    <div class="main">
+        <div class="header">
+            <h1>Dashboard</h1>
+            <div class="profile">Usuario</div>
+        </div>
+
+        <!-- Sección Dashboard -->
+        <section id="dashboard" class="card">
+            <h2>Estadísticas Generales</h2>
+            <p>Vehículos Activos: 10</p>
+            <p>Mantenimientos Pendientes: 3</p>
+            <p>Ingresos Recientes: $15,000</p>
+        </section>
+
+        <!-- Sección Vehículos -->
+        <section id="vehiculos" class="card">
+            <h2>Vehículos</h2>
+            <p>Aquí puedes registrar nuevos vehículos, editar información existente y ver detalles de cada vehículo en la flota.</p>
+            <table class="card-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Año</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Volvo</td>
+                        <td>FH16</td>
+                        <td>2020</td>
+                        <td>Activo</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Scania</td>
+                        <td>R450</td>
+                        <td>2019</td>
+                        <td>Mantenimiento</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección Conductores -->
+        <section id="conductores" class="card">
+            <h2>Conductores</h2>
+            <p>Gestiona los conductores y auxiliares, registra nuevos perfiles y asigna conductores a los vehículos disponibles.</p>
+            <table class="card-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Licencia</th>
+                        <th>Experiencia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Juan Pérez</td>
+                        <td>A2</td>
+                        <td>5 años</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>María López</td>
+                        <td>A3</td>
+                        <td>3 años</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección Fletes -->
+        <section id="fletes" class="card">
+            <h2>Fletes</h2>
+            <p>Registra nuevos fletes, consulta el historial y administra los ingresos y detalles de cada flete.</p>
+            <table class="card-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Origen</th>
+                        <th>Destino</th>
+                        <th>Vehículo</th>
+                        <th>Ingreso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Madrid</td>
+                        <td>Sevilla</td>
+                        <td>Volvo FH16</td>
+                        <td>$2000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección Mantenimientos -->
+        <section id="mantenimientos" class="card">
+            <h2>Mantenimientos</h2>
+            <p>Gestiona los mantenimientos preventivos y correctivos de tu flota, y consulta las alertas de mantenimientos pendientes.</p>
+            <ul>
+                <li>Volvo FH16 - Cambio de aceite en 500 km</li>
+                <li>Scania R450 - Inspección general en 1000 km</li>
+            </ul>
+        </section>
+
+        <!-- Sección Gastos -->
+        <section id="gastos" class="card">
+            <h2>Gastos</h2>
+            <p>Registra y consulta los gastos operativos, incluyendo combustible, peajes, repuestos, entre otros.</p>
+            <table class="card-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Descripción</th>
+                        <th>Tipo</th>
+                        <th>Monto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Combustible</td>
+                        <td>Operativo</td>
+                        <td>$500</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección Rodamientos -->
+        <section id="rodamientos" class="card">
+            <h2>Rodamientos</h2>
+            <p>Controla los kilometrajes y tiempos de uso de los vehículos para gestionar mantenimientos y renovaciones.</p>
+            <p>Vehículo: Volvo FH16 - Kilometraje actual: 120,000 km</p>
+        </section>
+
+        <!-- Sección Reportes -->
+        <section id="reportes" class="card">
+            <h2>Reportes</h2>
+            <p>Genera reportes detallados sobre ingresos, gastos, mantenimientos, y rendimiento de la flota.</p>
+            <p>Reporte mensual disponible para descargar.</p>
+        </section>
+    </div>
+</body>
+</html>
+
+
